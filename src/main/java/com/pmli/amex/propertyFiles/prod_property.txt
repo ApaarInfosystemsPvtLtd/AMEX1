@@ -1,0 +1,38 @@
+spring.application.name=biamex
+#spring.cloud.config.uri=${config-uri}
+
+############################################## PROD Property ##############################################
+server.port=2219
+spring.main.allow-bean-definition-overriding=true
+
+############################## PROD MONGODB URI ##############################
+spring.data.mongodb.uri=mongodb://munichreprod:munichreuser%40123@10.168.54.56:27000/munichreprod
+
+############################## PROD SQL DB URI ##############################
+spring.datasource.url= jdbc:sqlserver://WEBILLDB;databaseName=desappdb_prod
+spring.datasource.username= rpt
+spring.datasource.password= Metlife@11
+spring.datasource.updateUsername = webappusr
+spring.datasource.updatePassword = Inn0v@t!0n
+
+############################## PROD Token Generation URL ##############################
+tokenGeneration.service.url=https://connect.pnbmetlife.com/pmli/pmli-apis/v1/token-wa
+tokenGeneration.header.X-IBM-Client-Id=dab25015-6e06-4787-9843-f94ba387a2bb
+tokenGeneration.header.X-IBM-Client-Secret=cO5cT2mK5xG7dR2oJ8hC2mT8kT1aR7wB2mD8cN3uN4tW1tV4dD
+tokenGeneration.header.mettype=other
+tokenGeneration.header.subject=Customer Services
+
+############################## PROD FILENET CONNECTION (Shared By Alok) ##############################
+fileNet.uploadCustomerDocument.service.url=https://connect.pnbmetlife.com/pmli/pmli-apis//filenet/v1/upload-customer-document
+fileNet.header.X-IBM-Client-Id=dab25015-6e06-4787-9843-f94ba387a2bb
+fileNet.header.X-IBM-Client-Secret=cO5cT2mK5xG7dR2oJ8hC2mT8kT1aR7wB2mD8cN3uN4tW1tV4dD
+
+############################## PROD CounterOfferIllustration URL ##############################
+counterOfferIllustration.url=http://10.168.2.240:2206/pnbmetlife/v1/counterOffer1
+
+############################## PROD Nvest BI PDF URL ##############################
+nvestBiPdfUrl.url=http://10.168.211.23:8080/NsureServices.svc/DownloadPdfBI
+
+############################## MunichRe PROD ##############################
+bearerAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIiwid3JpdGUiLCJ2aWV3X2Rpc2Nsb3N1cmVfcmVzdWx0cyJdLCJpc3MiOiJodHRwczovL3d3dy5hbGxmaW5hbnouY29tIiwicmJrIjpudWxsLCJpYXQiOjE2NDk1OTI4NTcsImp0aSI6Ijk3NTZjMTQxLTFkNTMtNGMyNS1hM2RmLTZhNDRkODZlNjEyOCIsImF1dGhvcml0aWVzIjpbXSwiY2xpZW50X2lkIjoic3VwZXJ1c2VyMyJ9.SGghNhUOtAW9Iu_cjHZc1sngJym43SPcU86nNpEee-8
+base.url=http://10.168.2.215:9080/ais/api/cases

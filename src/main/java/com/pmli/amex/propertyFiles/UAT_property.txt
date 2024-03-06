@@ -1,0 +1,38 @@
+spring.application.name=biamex
+#spring.cloud.config.uri=${config-uri}
+
+############################################## UAT Property ##############################################
+server.port=2219
+spring.main.allow-bean-definition-overriding=true
+
+############################## UAT MONGODB URI ##############################
+spring.data.mongodb.uri=mongodb://posUser:posUser%40123@10.168.50.147:27017/posuat
+
+############################## UAT SQL DB URI ##############################
+spring.datasource.url= jdbc:sqlserver://10.168.50.202;databaseName=desappdb_ladev
+spring.datasource.username= rpt
+spring.datasource.password= rpt
+spring.datasource.updateUsername = rpt
+spring.datasource.updatePassword = rpt
+
+############################## UAT Token Generation URL ##############################
+tokenGeneration.service.url=https://test-connect.pnbmetlife.com/v1/token-wa
+tokenGeneration.header.X-IBM-Client-Id=2a382617-61d7-4922-940e-8f53f37bf487
+tokenGeneration.header.X-IBM-Client-Secret=H6cB2vC8nT5uA0vH0nU3nY7kA1jU3aG4xY4iP5fT3gV5iR5rN6
+tokenGeneration.header.mettype=other
+tokenGeneration.header.subject=Customer Services
+
+############################## NEW UAT FILENET CONNECTION (Shared By Vijesh)##############################
+fileNet.uploadCustomerDocument.service.url=https://10.168.209.109/pmli/business-api/filenet/v1/upload-customer-document
+fileNet.header.X-IBM-Client-Id=fccd587d-fd20-49b3-b00c-99ae034c77ae
+fileNet.header.X-IBM-Client-Secret=Y3fF5qR7sK0bA6yH7gY2jQ4jN2kC2wE5qB0bX5oF2bJ2dU2rB3
+
+############################## UAT CounterOfferIllustration URL ##############################
+counterOfferIllustration.url=http://10.168.50.30:2206/pnbmetlife/v1/counterOffer1
+
+############################## UAT Nvest BI PDF URL ##############################
+nvestBiPdfUrl.url=http://10.168.209.137:8080/NsureServices.svc/DownloadPdfBI
+
+############################## MunichRe UAT ##############################
+bearerAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIiwid3JpdGUiLCJ2aWV3X2Rpc2Nsb3N1cmVfcmVzdWx0cyJdLCJpc3MiOiJodHRwczovL3d3dy5hbGxmaW5hbnouY29tIiwicmJrIjpudWxsLCJpYXQiOjE2MTk3Nzk0MDksImp0aSI6ImM4YjIyZDZiLTE2N2MtNDQ2Yy04MjYwLTBiNjU3ZTc1MTMzMiIsImF1dGhvcml0aWVzIjpbXSwiY2xpZW50X2lkIjoic3VwZXJ1c2VyMSJ9.xVjrdsuvHWhI_T9FI_wXCcOvvOK1YYTYa4_m9mEggPo
+base.url=http://10.168.49.43:9080/ais/api/cases
